@@ -49,9 +49,9 @@ class Branj
   def authorization_string
     Base64.strict_encode64("#{jira_username}:#{jira_token}")
   end
-  
+
   def branch_name
-    "#{developer_name}/#{jira_issue_key}-#{simplified_issue_summary}"
+    "#{jira_issue_key}-#{simplified_issue_summary}"
   end
 
   def simplified_issue_summary
@@ -67,12 +67,6 @@ class Branj
     # Do not end with dash
     issue_summary = issue_summary[0..issue_summary.length-2] if issue_summary[issue_summary.length-1] == "-"
     issue_summary
-  end
-
-  def developer_name
-    # Determined from your Jira username
-    # e.g. if your Jira username is alice@acmeco.com then just extract "alice"
-    jira_username.split("@").first
   end
 
   def jira_username

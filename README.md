@@ -6,8 +6,8 @@ For example, let's say you have a Jira ticket with key `ABC-123` and summary "[P
 
 ```shell
 (master) $ branj ABC-123
-Switched to a new branch 'petro/ABC-123-p0-do-the-thing'
-(petro/ABC-123-p0-do-the-thing) $
+Switched to a new branch 'ABC-123-p0-do-the-thing'
+(ABC-123-p0-do-the-thing) $
 ```
 
 ## Installing
